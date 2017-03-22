@@ -1,0 +1,95 @@
+/*
+* @Author: bluedoor
+* @Date:   2017-03-22 15:51:49
+* @Last Modified by:   bluedoor
+* @Last Modified time: 2017-03-22 18:39:36
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+.box {
+	width: 640px;
+	height: 400px;
+	margin: 100px auto;
+	position: relative;
+}
+.box:hover > .navigator {
+	// display: block;
+	transition: opacity .3s ease-in-out;
+	opacity: 1;
+}
+.box > .navigator {
+	// display: none;
+	opacity: 0;
+}
+.box > .navigator > .pre,
+.box > .navigator > .next {
+	position: absolute;
+	top: 50%;
+	width: 50px;
+	height: 80px;
+	margin-top: -40px;
+	background-color: rgba(0,0,0,.4);
+	line-height: 80px;
+	font-size: 50px;
+	color: #bbb;
+	font-weight: 300;
+	text-align: center;
+	cursor: pointer;
+}
+.box > .navigator > .pre {
+	left: 0;
+}
+.box > .navigator > .next {
+	right: 0;
+}
+.box > ul {
+	width: 100%;
+	height: 100%;
+	list-style: none;
+	position: relative;
+}
+.box > ul > li {
+	width: 128px;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	transition: transform .6s ease-in-out;
+	transform-style: preserve-3d;
+	transform-origin: 0 50% -200px;
+}
+.box > ul > li > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.box > ul > li > div:nth-child(1) {
+	width: 100%;
+	height: 100%;
+	background: url(../../images/1.jpg) left top no-repeat;
+	transform: rotateX(0);
+
+}
+.box > ul > li > div:nth-child(2) {
+	width: 100%;
+	height: 100%;
+	background: url(../../images/2.jpg) left top no-repeat;
+	transform: rotateX(90deg) translateY(-200px) translateZ(200px);
+
+}
+.box > ul > li > div:nth-child(3) {
+	width: 100%;
+	height: 100%;
+	background: url(../../images/3.jpg) left top no-repeat;
+	transform: rotateX(180deg) translateZ(400px);
+
+}
+.box > ul > li > div:nth-child(4) {
+	width: 100%;
+	height: 100%;
+	background: url(../../images/4.jpg) left top no-repeat;
+	transform: rotateX(270deg) translateY(200px) translateZ(200px);
+}
